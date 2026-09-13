@@ -4,10 +4,10 @@ Turn a written story into a narrated, animated short film. You direct and approv
 agent plans, paints and cuts; deterministic scripts do the paid work; Remotion renders the film.
 
 <!-- hero: 6-second GIF of the showcase film, linking to the full film -->
-[![Alice in Dragonland — a four-minute film made with ShortFilmBuilder](docs/hero.gif)](https://www.youtube.com/watch?v=REPLACE_ME)
+[![Alice in Dragonland — a four-minute film made with ShortFilmBuilder](docs/hero.gif)](https://youtu.be/3Kv3GBIT6Aw)
 
 *Alice in Dragonland*, 4:17, made from a fourth-grader's short story: 41 shots, 5 voices,
-one composed score, about $45 of generated media. **[Watch it](https://www.youtube.com/watch?v=REPLACE_ME)**.
+one composed score, about $45 of generated media. **[Watch it](https://youtu.be/3Kv3GBIT6Aw)**.
 
 ## What you do, what the agent does
 
@@ -22,10 +22,41 @@ one composed score, about $45 of generated media. **[Watch it](https://www.youtu
 Nothing is generated until you have approved the plan for it, and nothing is called finished
 until the checks pass on the actual file.
 
+## What it looks like
+
+Six of the 41 shots. Every one started as a painted plate, was animated from that plate, and
+was cut to the exact sentence it belongs to.
+
+![Six stills from Alice in Dragonland](docs/media/gallery.jpg)
+
+**A plate becomes a shot.** Left: the painting the agent made and you approved. Right: the
+same frame, three seconds into the generated clip.
+
+![The take-off plate, and the clip generated from it](docs/media/plate-to-clip.jpg)
+
+**Every clip is reviewed as a contact strip** before it goes in the film, six frames sampled
+across the take, so a wrong prop or a second panda shows up here and not in the render.
+
+![Contact strip for shot B1, the watchman's alarm](docs/media/strip-B1.jpg)
+
+<img src="docs/media/the-catch.gif" width="400" alt="The catch: a dragon's claw closes gently around a falling girl">
+
 ## Quick start
 
 1. **Set up** — follow [SETUP.md](SETUP.md): three accounts, one `.env` file, then
    `npx tsx scripts/doctor.ts` until every line is green. About thirty minutes.
+
+   ```
+   ✓ Node.js                            v22.18.0
+   ✓ ffmpeg + ffprobe                   ffmpeg version 8.0.1
+   ✓ ElevenLabs key                     accepted
+   ✓   forced-alignment                 permitted
+   ✓   music                            permitted
+   ✗ Gemini key (images)                GEMINI_API_KEY not set
+                                        → https://aistudio.google.com/apikey → create → paste into .env
+   ✓ Application Default Credentials    valid token
+   ✓ Vertex AI + Veo 3.1                model reachable
+   ```
 2. **Open the repo in [Claude Code](https://claude.com/claude-code)** and run
    `/story-film path/to/your-story.md`. Other agents (Codex, Cursor, Gemini CLI) work from
    [AGENTS.md](AGENTS.md) and the [pipeline guide](docs/animated-story-pipeline.md).

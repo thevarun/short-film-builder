@@ -41,6 +41,8 @@
   .totals div { border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; background: var(--card); }
   .totals .k { display: block; font: 600 12px/1.4 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
   .totals .v { font-size: 24px; font-weight: 600; }
+  .hero { display: block; width: 100%; max-width: 480px; border-radius: 12px; margin: 0 0 24px; }
+  .fig { grid-column: 1 / -1; margin: 0; } .fig img { width: 100%; border-radius: 8px; display: block; } .fig figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
   footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
   a { color: inherit; }
 </style>
@@ -49,6 +51,7 @@
 <div class="wrap">
   <h1>How ShortFilmBuilder makes a film</h1>
   <p class="lede">Twelve stages from a written story to a rendered short. Each ends at a gate: you look, or listen, and say yes before the next stage spends anything. Click a stage to see who does what, what it produces, and what went wrong the first time.</p>
+  <a href="https://youtu.be/3Kv3GBIT6Aw"><img class="hero" src="hero.gif" alt="Alice in Dragonland: the take-off. Click to watch the film." width="480"></a>
   <div class="legend">
     <span><span class="who you">You</span> decide and approve</span>
     <span><span class="who agent">Agent</span> plans, writes, paints, reviews</span>
@@ -127,6 +130,7 @@
       <div><h4>Produces</h4><p><code>art/shots/*.png</code>, each referencing the last for continuity.</p></div>
       <div><h4>Cost</h4><p>About $8 for forty shots, including rejects.</p></div>
       <div class="gate"><b>Gate</b>The <strong>plate audit</strong>: no props from a later beat, no characters not yet introduced, legible at the framing, nothing that breaks the world rule.</div>
+      <figure class="fig"><img src="media/plate-to-clip.jpg" alt="A painted plate beside the clip generated from it"><figcaption>Left: the approved plate. Right: the clip generated from it, three seconds in.</figcaption></figure>
       <div class="lesson">First time: the heroine carried a sword nineteen seconds before she was given it, painted into four plates. A prompt cannot delete what the first frame contains; the plate is fixed instead.</div>
     </div>
   </details>
@@ -147,6 +151,7 @@
       <div><h4>Produces</h4><p><code>cache/motion/*.mp4</code> at the lite tier, every take archived by content hash; strips from <code>build-strips</code>.</p></div>
       <div><h4>Cost</h4><p>About $30 for forty shots. Roughly a third of clips need a second roll.</p></div>
       <div class="gate"><b>Gate</b>Every clip reviewed as a strip against the audit rules; what fails is re-rolled, and when the plate is the cause, the plate is repainted first.</div>
+      <figure class="fig"><img src="media/strip-B1.jpg" alt="A contact strip: six frames sampled across one generated clip"><figcaption>A contact strip: six frames across one take. This is what gets reviewed.</figcaption></figure>
       <div class="lesson">First time: a pull-back through a frame the model had to invent re-staged the scene with two of the same character. Cameras stay locked in crowds; real moves are saved for simple frames.</div>
     </div>
   </details>
@@ -171,6 +176,7 @@
     </div>
   </details>
 
+  <figure class="fig" style="margin-top:28px"><img src="media/gallery.jpg" alt="Six stills from the finished film"><figcaption>Six of the 41 shots in the finished film.</figcaption></figure>
   <div class="totals">
     <div><span class="k">Media, 4-minute film</span><span class="v">~$45</span></div>
     <div><span class="k">Per finished minute</span><span class="v">~$12</span></div>
