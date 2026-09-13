@@ -1,0 +1,94 @@
+{
+  "show": "alice-in-dragonland",
+  "part": "AB",
+  "audio": "cache/alice-in-dragonland/audio/AB.mp3",
+  "totalSec": 89.36,
+  "fps": 30,
+  "beats": [
+    {
+      "id": "A1",
+      "startSec": 0,
+      "endSec": 10.8,
+      "durationSec": 10.8,
+      "speakers": [
+        "NARRATOR"
+      ]
+    },
+    {
+      "id": "A2",
+      "startSec": 10.8,
+      "endSec": 33.679,
+      "durationSec": 22.879,
+      "speakers": [
+        "NARRATOR"
+      ]
+    },
+    {
+      "id": "A3",
+      "startSec": 33.679,
+      "endSec": 40.239,
+      "durationSec": 6.56,
+      "speakers": [
+        "NARRATOR"
+      ]
+    },
+    {
+      "id": "A4",
+      "startSec": 40.239,
+      "endSec": 51.839,
+      "durationSec": 11.6,
+      "speakers": [
+        "NARRATOR"
+      ]
+    },
+    {
+      "id": "B1",
+      "startSec": 52.69,
+      "endSec": 53.839,
+      "durationSec": 1.149,
+      "speakers": [
+        "ERIK"
+      ]
+    },
+    {
+      "id": "B2",
+      "startSec": 53.839,
+      "endSec": 61.2,
+      "durationSec": 7.361,
+      "speakers": [
+        "NARRATOR"
+      ]
+    },
+    {
+      "id": "B3",
+      "startSec": 61.84,
+      "endSec": 68.559,
+      "durationSec": 6.719,
+      "speakers": [
+        "ALICE",
+        "PO"
+      ]
+    },
+    {
+      "id": "B4",
+      "startSec": 68.559,
+      "endSec": 82.12,
+      "durationSec": 13.561,
+      "speakers": [
+        "NARRATOR",
+        "ALICE",
+        "PO"
+      ]
+    },
+    {
+      "id": "B5",
+      "startSec": 82.12,
+      "endSec": 85.92,
+      "durationSec": 3.8,
+      "speakers": [
+        "NARRATOR"
+      ]
+    }
+  ],
+  "note": "totalSec is the measured mp3 duration. The beat startSec values below came from the dialogue-API alignment, which ran ~4% short of the audio; nothing cuts to beats any more (shots are sentence-cut), so they are kept only as a record."
+}

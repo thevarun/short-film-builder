@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/scripts/hooks/verify-render.sh",
+            "timeout": 300,
+            "statusMessage": "Checking the render (black frames, sync)…"
+          }
+        ]
+      }
+    ]
+  }
+}

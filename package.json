@@ -1,0 +1,26 @@
+{
+  "name": "short-film-builder",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Turn a written story into a narrated animated short film: an agent directs, scripts execute, Remotion renders",
+  "type": "module",
+  "scripts": {
+    "smoke:tts": "tsx scripts/tts-smoke-test.ts",
+    "typecheck": "tsc --noEmit && pnpm --filter engine typecheck",
+    "studio": "pnpm --filter engine dev"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "packageManager": "pnpm@10.16.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

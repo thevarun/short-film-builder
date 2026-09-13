@@ -1,0 +1,31 @@
+node_modules/
+.env
+.DS_Store
+
+# Generated media — reproducible from manifests + cache
+cache/
+out/
+engine/out/
+shows/*/episodes/*/audio/
+shows/*/episodes/*/renders/
+shows/*/episodes/*/assets/generated/
+*.mp4
+*.mov
+*.mp3
+*.wav
+
+# Keep small committed media exceptions explicit
+!brands/**/*.mp3
+
+# Local tooling output (screenshots, playwright traces)
+_screenshots/
+.playwright-mcp/
+
+# nanobanana MCP scratch output
+.nanobanana-images/
+
+# Derived preview thumbnails (regenerable from the full-size art)
+*_thumb.jpeg
+
+# Superseded art versions: kept on disk for comparison, never in history
+shows/*/art/_superseded/

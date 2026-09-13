@@ -1,0 +1,127 @@
+{
+  "show": "alice-in-dragonland",
+  "part": "AB",
+  "model": "eleven_v3",
+  "note": "Timeline source. Text pre-normalized (no digits/abbreviations); TTS called with apply_text_normalization off so alignment indices match this text exactly.",
+  "voices": {
+    "NARRATOR": {
+      "id": "pFZP5JQG7iQjIQuC4Bku",
+      "name": "Lily"
+    },
+    "ALICE": {
+      "id": "ecp3DWciuUyW7BYM7II1",
+      "name": "Anika"
+    },
+    "PO": {
+      "id": "N2lVS1w4EtoT3dr4eOWO",
+      "name": "Callum"
+    },
+    "ERIK": {
+      "id": "SOYHLrjzK2X1ezoPC6cr",
+      "name": "Harry"
+    }
+  },
+  "beats": [
+    {
+      "id": "A1",
+      "lines": [
+        {
+          "speaker": "NARRATOR",
+          "text": "In the far north of Norway stood a village called Husk. Every autumn, the whole village came together to bring in the harvest before the snow."
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "lines": [
+        {
+          "speaker": "NARRATOR",
+          "text": "Alice was nine years old. High above the village was a cave, and in that cave lived dragons. Earth, water, stone, crystal, light. And last of all, the king of them all: fire."
+        },
+        {
+          "speaker": "NARRATOR",
+          "text": "Alice had never seen a dragon. She wanted to, more than anything."
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "lines": [
+        {
+          "speaker": "NARRATOR",
+          "text": "Every year, some of the harvest went to the forest spirits. The most important of these were the pandas."
+        }
+      ]
+    },
+    {
+      "id": "A4",
+      "lines": [
+        {
+          "speaker": "NARRATOR",
+          "text": "While most pandas were reserved and serene, Po was shy. Too shy even to join the festivities."
+        },
+        {
+          "speaker": "NARRATOR",
+          "text": "Which is kind of why Alice liked him best."
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "lines": [
+        {
+          "speaker": "ERIK",
+          "text": "[shouting, urgent] The dragons are coming!"
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "lines": [
+        {
+          "speaker": "NARRATOR",
+          "text": "The whole village stopped. Then it ran. Everyone ran for home, and Alice ran the other way."
+        }
+      ]
+    },
+    {
+      "id": "B3",
+      "lines": [
+        {
+          "speaker": "ALICE",
+          "text": "[breathless, excited] Po! Can you take me in the sky to see the dragons?"
+        },
+        {
+          "speaker": "PO",
+          "text": "[alarmed] Are you crazy? You're going to get eaten by them."
+        }
+      ]
+    },
+    {
+      "id": "B4",
+      "lines": [
+        {
+          "speaker": "NARRATOR",
+          "text": "Alice thought for a moment."
+        },
+        {
+          "speaker": "ALICE",
+          "text": "[sly] If you take me, I'll give you extra juicy bamboo."
+        },
+        {
+          "speaker": "PO",
+          "text": "[reluctant] I'll take you. But only if you keep this sword with you. Just in case."
+        }
+      ]
+    },
+    {
+      "id": "B5",
+      "lines": [
+        {
+          "speaker": "NARRATOR",
+          "text": "So Alice climbed on. And they flew."
+        }
+      ]
+    }
+  ]
+}

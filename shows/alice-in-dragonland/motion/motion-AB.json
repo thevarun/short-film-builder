@@ -1,0 +1,185 @@
+{
+  "show": "alice-in-dragonland",
+  "part": "AB",
+  "model": "veo-3.1-generate-001",
+  "location": "us-central1",
+  "note": "Directed shots, not animated stills. Each entry has an ACTION ARC (what changes from first second to last) and explicit CAMERA choreography. The approved painting is the first frame; where a shot flows into the next, the next shot's painting is supplied as lastFrame so Veo interpolates a genuinely continuous move between two approved compositions. Arc B shots whose content IS locomotion carry their own negativePrompt, because the show-wide one bans walking and running.",
+  "styleSuffix": "Traditional hand-painted 2D gouache storybook animation. Preserve the exact painted texture, visible brush grain, thick warm brown outlines and Nordic autumn palette of the source frame. Character designs, costumes, proportions and colours stay EXACTLY on-model throughout. No photorealism, no 3D rendering, no live action, no morphing, no text or captions.",
+  "shots": [
+    {
+      "id": "A1",
+      "treatment": "live",
+      "seconds": 8,
+      "keyframe": "shots/A1-village.png",
+      "action": "An ordinary working day in a Norse farming village. Each villager stays in their own spot and works: two carry a basket of harvest between them, a man shifts a sheaf of wheat on his shoulder, a woman stacks firewood, an old man whittles on a bench, a girl leads a goat a few steps, two neighbours talk in a doorway, three children play in a small circle. Chimney smoke drifts upward. A few birch leaves fall slowly. The grass sways very gently.",
+      "camera": "Locked off on a tripod. No pan, tilt, zoom or cut. The framing is identical first frame to last.",
+      "constraints": "NOTHING APPEARS OR DISAPPEARS. Every object, building, tree and person visible in the first frame stays visible for the whole shot, and no new object, flag, banner, bunting, pole or tree ever fades in or enters the frame. There are no flags, banners or bunting anywhere. Nobody walks across the frame or changes position; feet stay planted and only heads, faces, arms and wings move. The village layout, houses, palisade, fields, mountains and fjord are identical in the first and last frame. Nothing is burning, nothing is damaged, no dragons. NO STREAKS OR LINES OF ANY KIND: no diagonal streaks, no scratch lines, no wires, no ropes, no cables, no motion-blur trails and no light streaks ever cross the grass, the fields or the sky. Surfaces stay clean painted texture."
+    },
+    {
+      "id": "A2a",
+      "treatment": "live",
+      "seconds": 4,
+      "keyframe": "shots/A2a-alice-intro.png",
+      "action": "A nine-year-old girl stands in the village lane. She has stopped still, and she lifts her chin and turns her head to look UP and to the RIGHT, past the camera and away toward something high above the village. Her eyes widen with curiosity and a small eager smile starts. Her braid and cloak stir in the breeze. Behind her the village goes on working.",
+      "camera": "Locked off, with an almost imperceptible slow push in toward her.",
+      "constraints": "She stays exactly where she is and does not walk. Her look travels UP AND TO THE RIGHT and stays there — this eyeline sets up the next shot. She is curious and delighted, never frightened. The girl keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim. No dragons and nothing alarming appears."
+    },
+    {
+      "id": "A2b",
+      "treatment": "live",
+      "seconds": 6,
+      "keyframe": "shots/A1-village.png",
+      "lastFrame": "shots/A2b-dragons-wheeling.png",
+      "action": "Continuing from the girl's upward gaze, the camera lifts away from her and climbs UP AND TO THE RIGHT — she and the village drop away below, the mountainside rises past, and the view opens out into high cloud and open sky above the mountain.",
+      "camera": "One single continuous move up and to the right, rising and pulling back. Smooth and unhurried, never whipping, and it never reverses direction.",
+      "constraints": "A single continuous move with no cut, always up and to the right, never reversing. The village below stays intact and peaceful, nothing burning. No dragon appears.",
+      "chainFrom": "A2a"
+    },
+    {
+      "id": "A2c",
+      "treatment": "live",
+      "seconds": 6,
+      "chainFrom": "A2b",
+      "keyframe": "shots/A2b-dragons-wheeling.png",
+      "action": "The camera arrives in the open air outside the mountain cave, where five enormous elemental dragons ORBIT the cave mouth in a wide slow circle, one behind another, riding the air on huge unhurried wingbeats: a mossy brown earth dragon, a blue-green water dragon, a grey granite stone dragon, a violet crystal dragon and a glowing gold light dragon. They wheel steadily around the cave like birds circling a nest, passing across the frame in turn.",
+      "camera": "The camera holds near the cave and turns slowly to follow the circling dragons, so they sweep past it in a continuous ring.",
+      "constraints": "The dragons move in ONE consistent circular orbit around the cave and never dart, jitter or change direction. Each keeps its own distinct material and colour and they never merge or morph. No fire, no attack, no village, no people. No crimson or fire-coloured dragon appears in this shot."
+    },
+    {
+      "id": "A2d",
+      "treatment": "live",
+      "reuseClip": "A2d-approved.mp4",
+      "note": "Approved Vulcan reveal from the 16:37 take. Trimmed in Remotion, never regenerated."
+    },
+    {
+      "id": "A2e",
+      "treatment": "live",
+      "seconds": 6,
+      "keyframe": "shots/A2e-alice-longing.png",
+      "action": "A small girl stands alone on a grassy ridge at the edge of the village, seen from behind, one hand shading her eyes, gazing away across the valley toward a distant mountain. Her braid and rust-orange cloak stream in the wind. Grass bends around her. Cloud shadow drifts slowly across the autumn forest and the harvested fields between her and the mountain. She leans very slightly forward, wanting to go.",
+      "camera": "Very slow, gentle push in past her shoulder toward the distant mountain.",
+      "constraints": "ABSOLUTELY NO DRAGON: no dragon, no eye, no creature, no face, no silhouette, no wings and no glow appears anywhere in this shot — not in the cave, not in the sky, not on the mountain. The cave stays a small dark notch in distant rock. She stays on her spot and does not walk. The girl keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim."
+    },
+    {
+      "id": "A3",
+      "treatment": "live",
+      "seconds": 8,
+      "keyframe": "shots/A3a-offering-villagers.png",
+      "lastFrame": "shots/A4a-po-apart.png",
+      "action": "A line of villagers walks quietly along the footpath into the sunlit birch clearing, carrying baskets of harvest, a sack of grain and bundles of green bamboo. They reach the low mossy offering stone and begin setting their baskets down on it. Waiting for them in the clearing, standing calmly on the moss among the birches, the panda forest spirits accept the offering — one lowers its head over a basket. Golden motes drift up through the shafts of light and autumn leaves fall slowly.",
+      "camera": "One single slow, steady move following the villagers along the path into the clearing and widening out as they reach the stone. No cuts.",
+      "constraints": "ONE CONTINUOUS SHOT with no cut and no jump. The panda spirits are ALREADY STANDING ON THE GROUND in the clearing from the moment they become visible — they must never appear in the sky, drop down, fly in or materialise out of nothing. Nothing appears or disappears abruptly. The pandas keep their cream-and-charcoal markings, green shoulder moss, small glowing golden leaf-wings and gold aura, and stay calm and gentle. Adults have realistic adult proportions."
+    },
+    {
+      "id": "A4a",
+      "treatment": "live",
+      "seconds": 6,
+      "keyframe": "shots/A4a-po-apart.png",
+      "action": "The view widens and settles: in the warm sunlit centre of the clearing the other panda spirits stay with the villagers around the offering stone, while in the cool shade of the foreground, half hidden behind a birch trunk, one shy panda watches them. He shifts his weight, leans out a little further to see, then draws back behind the trunk again. His ears go back and his small wings stay folded and dim.",
+      "camera": "A slow widening move that reveals the shy panda in the foreground, then settles and holds.",
+      "constraints": "The shy panda stays behind his tree in the foreground shade for the whole shot and never walks out into the clearing. The group stays in the sunlit middle distance. The gap of empty ground between him and them is visible the entire time. He is wistful and gentle — never crying, never miserable, never angry. The panda keeps his cream-and-charcoal markings, the green moss across his shoulders, his two small glowing golden leaf-shaped wings and his soft gold aura. He is timid and gentle throughout, never angry and never baring teeth.",
+      "chainFrom": "A3"
+    },
+    {
+      "id": "A4b",
+      "treatment": "live",
+      "seconds": 8,
+      "keyframe": "shots/A4-twoshot.png",
+      "action": "Continuing in the same clearing, the girl walks up to the shy panda behind his tree and taps him lightly on the shoulder. He turns, startled for a moment. She holds out a fresh stalk of green bamboo. He hesitates, looks at her, then takes it from her hands with both paws, his face opening into a delighted smile. He dips his head to her in thanks and hugs the bamboo to his chest. His golden leaf-wings brighten and flutter. She beams up at him.",
+      "camera": "The camera eases in from the wide clearing to a two-shot of the pair and holds.",
+      "constraints": "This is the SAME clearing and the SAME light as the previous shot — the location never changes and there is no cut to anywhere else. By the end the bamboo is in the panda's paws and her hands are empty. He is shy at first and then delighted and grateful, never angry or sad. The girl keeps her rust-orange half-cloak, single dark braid, white blouse and green embroidered bodice. The panda keeps his green shoulder moss and small glowing golden leaf-wings.",
+      "chainFrom": "A4a"
+    },
+    {
+      "id": "B1",
+      "treatment": "live",
+      "seconds": 4,
+      "keyframe": "shots/B1-the-alarm.png",
+      "action": "The young watchman on the tower shouts a warning. His head and shoulders turn down toward the village below him while his pointing arm stays flung out behind him toward the sky. His mouth opens wide on the shout, his cloak cracks in the wind and the wheat below the tower sways. Far behind him the small dark dragon shapes glide slowly on across the clouds.",
+      "camera": "Locked off on a tripod. No pan, tilt or zoom. The framing is identical first frame to last.",
+      "constraints": "He stays standing on the tower platform for the whole shot and never climbs down, and his pointing arm stays raised and pointing the entire time. He is urgent and warning: wide-eyed, brows raised, mouth open on a shout. He is a young grown man with fully adult proportions — broad shoulders, a long torso and long legs. He keeps his green tunic, brown leather jerkin, rust-orange cloak and the spear at his side. The dragons stay small and far away against the distant clouds and never come closer. Nothing is burning and nothing is damaged. The palisade, the wheat field, the tower and the mountains are identical in the first and last frame."
+    },
+    {
+      "id": "B2a",
+      "treatment": "live",
+      "seconds": 4,
+      "keyframe": "shots/B2a-the-green.png",
+      "negativePrompt": "angry expression, snarling, bared teeth, aggression, menacing, scene change, cut to a different location, background changing, characters disappearing, character morphing, design drift, extra characters appearing, duplicated characters, rocket exhaust, jet flames, thruster plumes, motion streaks, scratch lines, speed lines, photorealism, 3D render, live action, CGI, anime, text, captions, subtitles, watermark, letterboxing, split screen, bonfire, campfire, open flame, fire, smoke, embers",
+      "action": "[00:00-00:01] The harvest festival is in full swing on the green: four villagers dance in a ring holding hands, others carry baskets and stack firewood.\n[00:01-00:02] Every villager stops dead at the same instant. The ring dance breaks and their joined hands drop. They all straighten and turn to look UP AND TO THE RIGHT, past the camera. Nothing else in the frame moves.\n[00:02-00:04] They scatter. Every single villager on the green turns and runs AWAY from the camera toward the doorways of the houses, arms up, baskets dropped on the grass. By the last frame the green is nearly empty and the last few are disappearing into doorways.",
+      "camera": "Locked off on a tripod. No pan, tilt or zoom. The framing is identical first frame to last.",
+      "constraints": "NOBODY IS STILL DANCING AFTER THE FIRST SECOND — the ring dance breaks and never re-forms, and from halfway through the shot every villager is running toward the houses. Everyone runs AWAY from the camera; nobody runs toward it. The green empties as the shot goes on and no new villager ever walks into frame. The houses, the bunting, the benches, the sheaves, the baskets, the hills and the fjord are identical in the first and last frame, and no new building, tree or pole ever appears. Nothing is burning: there is no bonfire, no cooking fire, no open flame, no smoke and no damage anywhere in the frame. No dragon appears. No young girl in a rust-orange half-cloak appears anywhere in this shot. The villagers stay at a readable size and never shrink into a distant crowd. Adults have realistic adult proportions. No streaks, scratch lines, wires, ropes, cables or motion-blur trails ever cross the grass or the sky."
+    },
+    {
+      "id": "B2b",
+      "treatment": "live",
+      "seconds": 4,
+      "keyframe": "shots/B2-alice-runs-v3.png",
+      "negativePrompt": "angry expression, snarling, bared teeth, aggression, menacing, scene change, cut to a different location, background changing, characters disappearing, character morphing, design drift, extra characters appearing, duplicated characters, rocket exhaust, jet flames, thruster plumes, motion streaks, scratch lines, speed lines, photorealism, 3D render, live action, CGI, anime, text, captions, subtitles, watermark, letterboxing, split screen",
+      "action": "The girl sprints straight toward the camera at full pelt, growing larger in the frame as she comes, her braid and her rust-orange cloak streaming out behind her, her face bright and laughing. Behind her the last few villagers run the other way toward the houses and the green empties.",
+      "camera": "Locked off at a low angle as she runs toward it. No pan and no zoom.",
+      "constraints": "She runs toward the camera for the whole shot and never turns, stops or changes direction. She is thrilled and determined — laughing, eyes bright, delighted rather than frightened. She keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim. The villagers behind her run away from the camera toward the houses. Nothing is burning, nothing is damaged and no dragon appears in the frame. She carries no sword and no weapon of any kind in this shot — she has nothing in her hands and nothing strapped to her back or belt except her small leather satchel."
+    },
+    {
+      "id": "B3a",
+      "treatment": "live",
+      "seconds": 4,
+      "keyframe": "shots/B3a-alice-arrives.png",
+      "lastFrame": "shots/B3-are-you-crazy-v3.png",
+      "negativePrompt": "angry expression, snarling, bared teeth, aggression, menacing, scene change, cut to a different location, background changing, characters disappearing, character morphing, design drift, extra characters appearing, duplicated characters, rocket exhaust, jet flames, thruster plumes, motion streaks, scratch lines, speed lines, photorealism, 3D render, live action, CGI, anime, text, captions, subtitles, watermark, letterboxing, split screen",
+      "action": "The girl runs the last few steps into the clearing and pulls up short in front of the panda spirit, out of breath, then reaches both hands out toward him and asks him something. He turns fully toward her and his eyes go wide and round as he listens.",
+      "camera": "A gentle handheld two-shot that drifts a little to the right as she arrives and then settles.",
+      "constraints": "The birch clearing, the moss, the autumn trees and the warm slanting light are identical from the first frame to the last, and there is no cut to anywhere else. She stops in front of him and stays there for the rest of the shot. He stays standing on his own spot and never walks toward her or away from her. He is soft-faced and kindly throughout — round open eyes, brows raised high, a small open mouth. He keeps his cream-and-charcoal markings, the green moss across his shoulders, his two small glowing golden leaf-shaped wings and his soft gold aura. She keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim. Nobody else is in the clearing. She carries no sword and no weapon of any kind in this shot — she has nothing in her hands and nothing strapped to her back or belt except her small leather satchel."
+    },
+    {
+      "id": "B3b",
+      "treatment": "live",
+      "seconds": 4,
+      "keyframe": "shots/B3-are-you-crazy-v3.png",
+      "action": "The panda spirit rocks back on his heels, lifts both front paws up in front of his chest and shakes his head from side to side, again and again, refusing her. The girl keeps her hands stretched out toward him, pleading. His golden leaf-wings flutter and flare a little with each shake of his head.",
+      "camera": "Locked off two-shot with the faintest push in.",
+      "constraints": "He is soft, round-eyed and comically flustered for the whole shot: brows raised high, eyes wide and round, mouth open in a small circle, face gentle and kind. Both of them stay standing on their own spots and never walk toward or away from each other; only heads, arms and wings move. The birch clearing, the moss, the autumn trees and the warm slanting light are identical from the first frame to the last, and there is no cut to anywhere else. He keeps his cream-and-charcoal markings, the green moss across his shoulders, his two small glowing golden leaf-shaped wings and his soft gold aura. She keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim. She carries no sword and no weapon of any kind in this shot — she has nothing in her hands and nothing strapped to her back or belt except her small leather satchel."
+    },
+    {
+      "id": "B4a",
+      "treatment": "live",
+      "seconds": 6,
+      "chainFrom": "B3b",
+      "keyframe": "shots/B3-are-you-crazy-v3.png",
+      "action": "The girl pauses, thinking, then brings a fresh green stalk of bamboo out from behind her back, holds it up and swings it slowly from side to side. The panda spirit's eyes lock onto the bamboo and track it left and right, his whole head following it, his refusal melting into longing.",
+      "camera": "Locked off two-shot. No pan and no zoom.",
+      "constraints": "Both of them stay standing on their own spots for the whole shot; only heads, arms and wings move. He is longing and tempted throughout — wide round eyes, soft raised brows, a gentle mouth. By the end the bamboo is up in her hand and his eyes are fixed on it. NO SWORD AND NO WEAPON OF ANY KIND APPEARS IN THIS SHOT. The birch clearing, the moss, the autumn trees and the warm slanting light are identical from the first frame to the last, and there is no cut to anywhere else. He keeps his cream-and-charcoal markings, the green moss across his shoulders, his two small glowing golden leaf-shaped wings and his soft gold aura. She keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim."
+    },
+    {
+      "id": "B4b",
+      "treatment": "live",
+      "seconds": 6,
+      "chainFrom": "B4a",
+      "keyframe": "shots/B3-are-you-crazy-v3.png",
+      "lastFrame": "shots/B4-the-bargain-v2.png",
+      "action": "[00:00-00:02] The panda spirit stops resisting, steadies himself and nods once, agreeing.\n[00:02-00:06] He reaches behind his shoulder and brings out a small sheathed sword, then holds it up toward her in one paw, brow furrowed, earnest and worried.",
+      "camera": "Locked off two-shot. No pan and no zoom.",
+      "constraints": "Both of them stay standing on their own spots for the whole shot; only heads, arms and wings move. She keeps holding the bamboo up in her hand the entire time and does not hand it over yet. He is earnest and anxious but gentle — eyes wide and round, brows drawn up in worry, mouth soft and closed. By the end the sheathed sword is held up in his paw and the bamboo is still up in her hand. The birch clearing, the moss, the autumn trees and the warm slanting light are identical from the first frame to the last, and there is no cut to anywhere else. He keeps his cream-and-charcoal markings, the green moss across his shoulders, his two small glowing golden leaf-shaped wings and his soft gold aura. She keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim. The ONLY sword in this shot is the one he brings out and holds up; she has no weapon of her own and nothing strapped to her back."
+    },
+    {
+      "id": "B5a",
+      "treatment": "live",
+      "seconds": 6,
+      "keyframe": "shots/B4-the-bargain-v2.png",
+      "negativePrompt": "angry expression, snarling, bared teeth, aggression, menacing, scene change, cut to a different location, background changing, characters disappearing, character morphing, design drift, extra characters appearing, duplicated characters, rocket exhaust, jet flames, thruster plumes, motion streaks, scratch lines, speed lines, photorealism, 3D render, live action, CGI, anime, text, captions, subtitles, watermark, letterboxing, split screen",
+      "action": "[00:00-00:02] The exchange completes: she takes the sheathed sword from his paw and puts the stalk of bamboo into his paws. He hugs the bamboo to his chest, delighted.\n[00:02-00:06] He drops forward onto all fours and crouches low, and she climbs up onto his back and settles astride his shoulders, one hand in his fur. His golden leaf-wings unfold and brighten.",
+      "camera": "Locked off two-shot. No pan and no zoom.",
+      "constraints": "By the end the sword is on her belt or in her hand, the bamboo is in his paws, and she is sitting astride his back with her hands gripping his fur. Once she is on his back she stays on it and the two of them never separate. Neither of them leaves the clearing and neither of them takes off in this shot — his feet stay on the ground from the first frame to the last. He is warm and delighted throughout, she is gleeful. The birch clearing, the moss, the autumn trees and the warm slanting light are identical from the first frame to the last, and there is no cut to anywhere else. He keeps his cream-and-charcoal markings, the green moss across his shoulders, his two small glowing golden leaf-shaped wings and his soft gold aura. She keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim."
+    },
+    {
+      "id": "B5b",
+      "treatment": "live",
+      "seconds": 4,
+      "keyframe": "shots/B5-takeoff.png",
+      "negativePrompt": "angry expression, snarling, bared teeth, aggression, menacing, scene change, cut to a different location, background changing, characters disappearing, character morphing, design drift, extra characters appearing, duplicated characters, rocket exhaust, jet flames, thruster plumes, motion streaks, scratch lines, speed lines, photorealism, 3D render, live action, CGI, anime, text, captions, subtitles, watermark, letterboxing, split screen",
+      "action": "The panda spirit and the girl on his back climb away from the camera into the golden sky, his wings beating steadily, the two of them growing smaller together as they rise toward the clouds over the autumn valley.",
+      "camera": "Locked off, held completely still as they climb away and shrink into the sky.",
+      "constraints": "SHE REMAINS SEATED ASTRIDE HIS BACK FOR THE ENTIRE SHOT with her hands gripping his fur, and the two of them never separate — they stay one single joined shape from the first frame to the last. His golden leaf-wings beat steadily above his shoulders and are the only light on him; NOTHING TRAILS FROM BENEATH THEM — no plume, no flame, no jet, no exhaust and no beam ever appears below or behind them. He flies calm and steady, she is delighted. He keeps his cream-and-charcoal markings, the green moss across his shoulders, his two small glowing golden leaf-shaped wings and his soft gold aura. She keeps her rust-orange half-cloak, single dark braid, white blouse, green embroidered bodice and long black skirt with red-and-white folk trim. The valley, the autumn forest and the clouds below stay intact and peaceful; nothing is burning and no other creature appears."
+    }
+  ],
+  "negativePrompt": "angry expression, snarling, bared teeth, aggression, menacing, scene change, cut to a different location, background changing, characters disappearing, character morphing, design drift, extra characters appearing, duplicated characters, rocket exhaust, jet flames, thruster plumes, photorealism, 3D render, live action, CGI, anime, text, captions, subtitles, watermark, letterboxing, split screen, walking, stepping, characters moving across the frame, changing positions, camera pan, camera zoom"
+}

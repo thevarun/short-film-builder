@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How ShortFilmBuilder makes a film</title>
+<style>
+  :root {
+    --bg: #faf7f1; --ink: #23201b; --muted: #6b6257; --rule: #e4dccf; --card: #fffdf9;
+    --you: #b8860b; --agent: #2f6f8f; --script: #4c7a4c; --gate: #fff3cd; --gate-ink: #7a5a00;
+    --accent: #7a4e22;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16120f; --ink: #f1ebe0; --muted: #a79d8f; --rule: #332b24; --card: #1f1a15;
+      --you: #e8c27a; --agent: #7fb3d5; --script: #8fc38f; --gate: #3a2f10; --gate-ink: #e8c27a; --accent: #e8c27a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 Georgia, "Times New Roman", serif; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 40px; line-height: 1.1; margin: 0 0 8px; font-weight: 600; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); font-size: 18px; margin: 0 0 28px; max-width: 62ch; }
+  .legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 32px; font-size: 14px; color: var(--muted); }
+  .who { display: inline-block; padding: 1px 9px; border-radius: 999px; font: 600 12px/1.6 system-ui, sans-serif; letter-spacing: .04em; text-transform: uppercase; color: #fff; }
+  .who.you { background: var(--you); } .who.agent { background: var(--agent); } .who.script { background: var(--script); }
+  .stage { border: 1px solid var(--rule); background: var(--card); border-radius: 12px; margin: 0 0 12px; }
+  .stage summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: baseline; padding: 14px 18px; }
+  .stage summary::-webkit-details-marker { display: none; }
+  .num { font: 600 13px/1 system-ui, sans-serif; color: var(--muted); letter-spacing: .08em; }
+  .title { font-size: 20px; font-weight: 600; }
+  .title small { display: block; font-size: 14px; font-weight: 400; color: var(--muted); margin-top: 2px; }
+  .whos { display: flex; gap: 6px; }
+  .body { padding: 0 18px 18px 76px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
+  @media (max-width: 640px) { .body { grid-template-columns: 1fr; padding-left: 18px; } }
+  .body h4 { margin: 0 0 4px; font: 600 12px/1.4 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .body p { margin: 0; font-size: 15px; }
+  .body code { font: 13px/1.4 ui-monospace, Menlo, monospace; background: var(--rule); padding: 1px 5px; border-radius: 4px; }
+  .gate { grid-column: 1 / -1; background: var(--gate); color: var(--gate-ink); border-radius: 8px; padding: 10px 14px; font-size: 15px; }
+  .gate b { font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin-right: 8px; }
+  .lesson { grid-column: 1 / -1; border-left: 3px solid var(--accent); padding-left: 12px; color: var(--muted); font-size: 14.5px; }
+  .totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 36px 0 0; }
+  .totals div { border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; background: var(--card); }
+  .totals .k { display: block; font: 600 12px/1.4 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .totals .v { font-size: 24px; font-weight: 600; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>How ShortFilmBuilder makes a film</h1>
+  <p class="lede">Twelve stages from a written story to a rendered short. Each ends at a gate: you look, or listen, and say yes before the next stage spends anything. Click a stage to see who does what, what it produces, and what went wrong the first time.</p>
+  <div class="legend">
+    <span><span class="who you">You</span> decide and approve</span>
+    <span><span class="who agent">Agent</span> plans, writes, paints, reviews</span>
+    <span><span class="who script">Script</span> does the paid, deterministic work</span>
+  </div>
+
+  <details class="stage" open>
+    <summary><span class="num">01</span><span class="title">Read &amp; cast<small>Who is in this story, and what do they look like?</small></span><span class="whos"><span class="who agent">Agent</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>character-bible.md</code>: every character, canonical heights, a locked style anchor, proportion rules <em>by subject class</em>.</p></div>
+      <div><h4>Cost</h4><p>Nothing yet.</p></div>
+      <div class="gate"><b>Gate</b>The author's intent is confirmed and the style anchor image is locked.</div>
+      <div class="lesson">First time: a style rule that said "large heads, small bodies" for <em>everyone</em> drew the adult as a child through three rounds. Rules now attach to a subject class.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">02</span><span class="title">Character sheets<small>One reference sheet per character, on model.</small></span><span class="whos"><span class="who agent">Agent</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>art/characters/*.png</code></p></div>
+      <div><h4>Cost</h4><p>About a dollar of image generations.</p></div>
+      <div class="gate"><b>Gate</b>Each sheet approved. Adults are generated fresh, never edited from a child's sheet.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">03</span><span class="title">Beat sheet<small>The story as beats, with the author's own lines kept verbatim.</small></span><span class="whos"><span class="who agent">Agent</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>beat-sheet.md</code>: beats, verbatim lines, a runtime budget, and the one world rule that governs every visual choice.</p></div>
+      <div><h4>Cost</h4><p>Nothing.</p></div>
+      <div class="gate"><b>Gate</b>Runtime and every adaptation decision agreed with you.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">04</span><span class="title">Location bible<small>One master plate per place.</small></span><span class="whos"><span class="who agent">Agent</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>art/locations/*.png</code>, with a colour-temperature progression across the film.</p></div>
+      <div><h4>Cost</h4><p>About a dollar.</p></div>
+      <div class="gate"><b>Gate</b>Plates approved.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">05</span><span class="title">Audio script<small>Every line, pre-normalised, with performance tags and a cast.</small></span><span class="whos"><span class="who agent">Agent</span><span class="who script">Script</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>audio-script-*.md</code> and <code>audio/script-*.json</code>. Candidate voices are auditioned with <code>voice-audition.ts</code>.</p></div>
+      <div><h4>Cost</h4><p>Cents, for the auditions.</p></div>
+      <div class="gate"><b>Gate</b>Voices chosen; the script read once for line changes.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">06</span><span class="title">Record &amp; align<small>One continuous take, then measure exactly where every sentence is.</small></span><span class="whos"><span class="who script">Script</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p>The mp3, and <code>audio/*.sentences.json</code> with the measured start and end of every sentence. <code>record-dialogue</code> → <code>force-align</code> → <code>split-sentences</code> → <code>align-sentences</code>, in that order.</p></div>
+      <div><h4>Cost</h4><p>Under a dollar.</p></div>
+      <div class="gate"><b>Gate</b><strong>You listen to the take</strong> and accept the runtime. The recording is now the timeline; nothing is cut before this.</div>
+      <div class="lesson">First time: the voice API's own timestamps ran 4% short of the audio it returned. Every cut drifted, and three "fixes" were verified against the wrong ruler. Now the saved mp3 is force-aligned and it alone is the ruler.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">07</span><span class="title">Shot plan<small>Which sentences each shot owns, and how shots join.</small></span><span class="whos"><span class="who agent">Agent</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>shot-plan-*.md</code>: shots cut to sentence spans, live clip or still-with-camera-move, transitions, the paintings needed.</p></div>
+      <div><h4>Cost</h4><p>Nothing.</p></div>
+      <div class="gate"><b>Gate</b>Plan confirmed before any plate is painted.</div>
+      <div class="lesson">First time: beats were split into equal thirds, and a dragon appeared on screen under "had never seen a dragon". Shots are cut to sentences now, never to fractions of a beat.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">08</span><span class="title">Plates<small>The first frame of every shot, painted in story order.</small></span><span class="whos"><span class="who agent">Agent</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>art/shots/*.png</code>, each referencing the last for continuity.</p></div>
+      <div><h4>Cost</h4><p>About $8 for forty shots, including rejects.</p></div>
+      <div class="gate"><b>Gate</b>The <strong>plate audit</strong>: no props from a later beat, no characters not yet introduced, legible at the framing, nothing that breaks the world rule.</div>
+      <div class="lesson">First time: the heroine carried a sword nineteen seconds before she was given it, painted into four plates. A prompt cannot delete what the first frame contains; the plate is fixed instead.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">09</span><span class="title">Shot specs<small>What moves, and how the camera moves, one of each per clip.</small></span><span class="whos"><span class="who agent">Agent</span><span class="who script">Script</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>motion/motion-*.json</code>: action, camera, constraints, per-shot negatives, frame chains; and the cut in <code>film.json</code>.</p></div>
+      <div><h4>Cost</h4><p>Nothing.</p></div>
+      <div class="gate"><b>Gate</b><code>check-retime</code> passes: every clip will play between 0.5× and 1.3×, and the music will land.</div>
+      <div class="lesson">First time: writing "no fire" in the prompt body made the fire bigger. Constraints are affirmative in the body; bans live only in the negative prompt.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">10</span><span class="title">Generate<small>Clips from the plates, reviewed one contact strip at a time.</small></span><span class="whos"><span class="who script">Script</span><span class="who agent">Agent</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p><code>cache/motion/*.mp4</code> at the lite tier, every take archived by content hash; strips from <code>build-strips</code>.</p></div>
+      <div><h4>Cost</h4><p>About $30 for forty shots. Roughly a third of clips need a second roll.</p></div>
+      <div class="gate"><b>Gate</b>Every clip reviewed as a strip against the audit rules; what fails is re-rolled, and when the plate is the cause, the plate is repainted first.</div>
+      <div class="lesson">First time: a pull-back through a frame the model had to invent re-staged the scene with two of the same character. Cameras stay locked in crowds; real moves are saved for simple frames.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">11</span><span class="title">Compose &amp; render<small>Arcs first, then parts, then the film.</small></span><span class="whos"><span class="who script">Script</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p>Remotion compositions generated from <code>film.json</code>; rendered files under <code>out/</code>.</p></div>
+      <div><h4>Cost</h4><p>Nothing. Renders are local.</p></div>
+      <div class="gate"><b>Gate</b><code>verify-sync</code> and <code>verify-picture</code> pass <em>on the rendered file</em>: every cut within a quarter second of a speech onset, no black frames where a shot should be.</div>
+      <div class="lesson">First time: a trimmed clip went black for the last third of its window and every data-level check passed. The checks now look at the frames and the audio of the file itself.</div>
+    </div>
+  </details>
+
+  <details class="stage">
+    <summary><span class="num">12</span><span class="title">Finish<small>Title, credits, music, and the whole thing watched once.</small></span><span class="whos"><span class="who agent">Agent</span><span class="who script">Script</span><span class="who you">You</span></span></summary>
+    <div class="body">
+      <div><h4>Produces</h4><p>Cards and credits in <code>film.json</code>; a composed instrumental cue placed so its last strong bars land under the end card; levels measured.</p></div>
+      <div><h4>Cost</h4><p>About a dollar for the cue.</p></div>
+      <div class="gate"><b>Gate</b><strong>You watch the whole film.</strong></div>
+      <div class="lesson">First time: the end card was silent three times running, because the cue's fade was pinned instead of its landing. The script now measures where the chord lands.</div>
+    </div>
+  </details>
+
+  <div class="totals">
+    <div><span class="k">Media, 4-minute film</span><span class="v">~$45</span></div>
+    <div><span class="k">Per finished minute</span><span class="v">~$12</span></div>
+    <div><span class="k">Shots</span><span class="v">41</span></div>
+    <div><span class="k">Working time</span><span class="v">~1 day / sequence</span></div>
+  </div>
+
+  <footer>List prices, from the retrospective of <em>Alice in Dragonland</em>. Cash cost was near zero on cloud credits. The written guide with every learning is <a href="animated-story-pipeline.md">docs/animated-story-pipeline.md</a>.</footer>
+</div>
+</body>
+</html>

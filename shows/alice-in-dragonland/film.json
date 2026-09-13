@@ -1,0 +1,300 @@
+{
+  "show": "alice-in-dragonland",
+  "id": "Alice",
+  "title": "Alice in Dragonland",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "tailSec": 2.5,
+  "defaultFade": 14,
+  "parts": [
+    {
+      "id": "AB",
+      "arcs": [
+        "A",
+        "B"
+      ]
+    }
+  ],
+  "cards": {
+    "title": {
+      "seconds": 7,
+      "backdrop": "art/locations/05-sky-golden.jpg",
+      "face": "swash"
+    },
+    "fin": {
+      "seconds": 5,
+      "text": "Fin"
+    },
+    "credits": {
+      "seconds": 22,
+      "lines": [
+        {
+          "role": "Animated by",
+          "name": "Varun Torka"
+        },
+        {
+          "heading": "Made with"
+        },
+        {
+          "role": "Voices & music",
+          "name": "ElevenLabs"
+        },
+        {
+          "role": "Animation",
+          "name": "Google Veo 3.1"
+        },
+        {
+          "role": "Illustration",
+          "name": "Gemini · Nano Banana"
+        },
+        {
+          "role": "Assembly",
+          "name": "Remotion"
+        },
+        {
+          "role": "Direction",
+          "name": "Claude Fable 5.1 in Claude Code"
+        }
+      ]
+    }
+  },
+  "music": {
+    "cue": "underscore",
+    "levels": {
+      "under": 0.13,
+      "cards": 0.42,
+      "end": 0.6
+    },
+    "fadeInSec": 2,
+    "fadeOutSec": 1.5,
+    "landingLeadSec": 1.5,
+    "allowEarlyEnd": true
+  },
+  "shots": [
+    {
+      "id": "A1",
+      "sentence": [
+        0,
+        1
+      ],
+      "video": "cache/motion/A1.lite.mp4",
+      "clipSeconds": 8,
+      "fadeIn": 20
+    },
+    {
+      "id": "A2a",
+      "sentence": [
+        2,
+        2
+      ],
+      "video": "cache/motion/A2a.lite.mp4",
+      "clipSeconds": 4,
+      "trim": [
+        0,
+        1.7
+      ],
+      "fadeIn": 8,
+      "note": "4s is Veo's shortest clip but the sentence is only 1.67s, so trim rather than play it at 2.4x."
+    },
+    {
+      "id": "A2b",
+      "sentence": [
+        3,
+        3
+      ],
+      "video": "cache/motion/A2b.lite.mp4",
+      "clipSeconds": 6,
+      "fadeIn": 0,
+      "note": "fadeIn 0 marks a chained join: the previous clip's final frame and this clip's first frame are the same image, so any fade would smear a perfect match."
+    },
+    {
+      "id": "A2c",
+      "sentence": [
+        4,
+        4
+      ],
+      "video": "cache/motion/A2c.lite.mp4",
+      "clipSeconds": 6,
+      "fadeIn": 0
+    },
+    {
+      "id": "A2d",
+      "sentence": [
+        5,
+        5
+      ],
+      "video": "cache/motion/A2d-approved.mp4",
+      "clipSeconds": 8,
+      "trim": [
+        0,
+        4.16
+      ],
+      "fadeIn": 8,
+      "note": "Approved earlier take, reused rather than regenerated. Trimmed to the first 4.16s, before the push-in crops his horns. Not chained, so this join is a cut."
+    },
+    {
+      "id": "A2e",
+      "sentence": [
+        6,
+        7
+      ],
+      "video": "cache/motion/A2e.lite.mp4",
+      "clipSeconds": 6,
+      "fadeIn": 0,
+      "note": "Deliberate hard cut: the dragon's eye, straight to the child who has never seen one."
+    },
+    {
+      "id": "A3",
+      "sentence": [
+        8,
+        9
+      ],
+      "video": "cache/motion/A3.lite.mp4",
+      "clipSeconds": 8,
+      "fadeIn": 24
+    },
+    {
+      "id": "A4a",
+      "sentence": [
+        10,
+        11
+      ],
+      "video": "cache/motion/A4a.lite.mp4",
+      "clipSeconds": 6,
+      "fadeIn": 0,
+      "motes": true
+    },
+    {
+      "id": "A4b",
+      "sentence": [
+        12,
+        12
+      ],
+      "video": "cache/motion/A4b.lite.mp4",
+      "clipSeconds": 8,
+      "trim": [
+        0,
+        3.8
+      ],
+      "fadeIn": 0,
+      "motes": true,
+      "hold": "cache/motion/_frames/A4b.hold.png",
+      "note": "Trimmed to 3.8s so one trim serves both compositions: ~1x in the full part, where B1 follows immediately, and a gentle 0.6x in Arc A, where the tail is held on the closing image. Untrimmed it ran at 2.08x and the ending felt rushed."
+    },
+    {
+      "id": "B1",
+      "sentence": [
+        13,
+        13
+      ],
+      "video": "cache/motion/B1.lite.mp4",
+      "clipSeconds": 4,
+      "trim": [
+        1.6,
+        3.6
+      ],
+      "fadeIn": 24,
+      "note": "In the clip his arm is not out and his mouth is not open until ~2s. Take the two seconds around the shout rather than the head of the clip."
+    },
+    {
+      "id": "B2a",
+      "sentence": [
+        14,
+        15
+      ],
+      "video": "cache/motion/B2a.lite.mp4",
+      "clipSeconds": 4,
+      "fadeIn": 14
+    },
+    {
+      "id": "B2b",
+      "sentence": [
+        16,
+        16
+      ],
+      "video": "cache/motion/B2b.lite.mp4",
+      "clipSeconds": 4,
+      "fadeIn": 8
+    },
+    {
+      "id": "B3a",
+      "sentence": [
+        17,
+        18
+      ],
+      "video": "cache/motion/B3a.lite.mp4",
+      "clipSeconds": 4,
+      "fadeIn": 24,
+      "motes": true,
+      "note": "New location: the village green, cut to the forest clearing."
+    },
+    {
+      "id": "B3b",
+      "sentence": [
+        19,
+        20
+      ],
+      "video": "cache/motion/B3b.lite.mp4",
+      "clipSeconds": 4,
+      "fadeIn": 8,
+      "motes": true,
+      "note": "B3a is interpolated into this shot's painting, so the seam is already matched; 8f covers the small drift between Veo's approximation and the pristine plate."
+    },
+    {
+      "id": "B4a",
+      "sentence": [
+        21,
+        22
+      ],
+      "video": "cache/motion/B4a.lite.mp4",
+      "clipSeconds": 6,
+      "fadeIn": 0,
+      "motes": true
+    },
+    {
+      "id": "B4b",
+      "sentence": [
+        23,
+        24
+      ],
+      "video": "cache/motion/B4b.lite.mp4",
+      "clipSeconds": 6,
+      "trim": [
+        0.4,
+        6
+      ],
+      "fadeIn": 8,
+      "motes": true,
+      "note": "Trimmed off the FRONT, not the tail: the value of this shot is its ending, where it arrives on the approved bargain plate. Losing the chained first frame costs an 8f cut instead of a frame-exact join."
+    },
+    {
+      "id": "B5a",
+      "sentence": [
+        25,
+        26
+      ],
+      "video": "cache/motion/B5a.lite.mp4",
+      "clipSeconds": 6,
+      "trim": [
+        0.4,
+        6
+      ],
+      "fadeIn": 8,
+      "motes": true,
+      "note": "Trimmed off the front: the value is the ending, with her seated on his back. The first 0.4s is the hand-off finishing, which the bargain plate already shows."
+    },
+    {
+      "id": "B5b",
+      "sentence": [
+        27,
+        27
+      ],
+      "video": "cache/motion/B5b.lite.mp4",
+      "clipSeconds": 4,
+      "fadeIn": 14,
+      "hold": "cache/motion/_frames/B5b.hold.png",
+      "note": "Ground to sky is a jump in time as well as place; the dissolve carries it."
+    }
+  ]
+}

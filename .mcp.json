@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "nanobanana": {
+      "command": "sh",
+      "args": ["-c", "set -a; [ -f .env ] && . ./.env; set +a; exec uvx --with 'fastmcp<3' nanobanana-mcp-server@latest"],
+      "env": { "IMAGE_OUTPUT_DIR": "./.nanobanana-images" }
+    }
+  }
+}
